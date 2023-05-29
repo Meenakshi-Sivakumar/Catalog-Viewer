@@ -8,20 +8,22 @@ const lastIndex = data.length - 1;
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isSlideshowActive, setIsSlideshowActive] = useState(false);
-  let interval;
 
   useEffect(() => {
+    let interval;
+
     if (isSlideshowActive) {
       interval = setInterval(() => {
-        const newIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
-        setActiveIndex(newIndex);
+        setActiveIndex((prevIndex) =>
+          prevIndex === lastIndex ? 0 : prevIndex + 1
+        );
       }, 3000);
     }
 
     return () => {
       clearInterval(interval);
     };
-  }, [activeIndex, isSlideshowActive]);
+  }, [isSlideshowActive]);
 
   const startSlideshow = () => {
     setIsSlideshowActive(true);
@@ -32,14 +34,16 @@ function App() {
   };
 
   const nextBanner = () => {
-    const newIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
-    setActiveIndex(newIndex);
+    setActiveIndex((prevIndex) =>
+      prevIndex === lastIndex ? 0 : prevIndex + 1
+    );
     stopSlideshow();
   };
 
   const prevBanner = () => {
-    const newIndex = activeIndex === 0 ? lastIndex : activeIndex - 1;
-    setActiveIndex(newIndex);
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? lastIndex : prevIndex - 1
+    );
     stopSlideshow();
   };
 
@@ -50,19 +54,19 @@ function App() {
 
   return (
     <div className='main-container'>
-    <main>
-    <HeroBanner {...data[activeIndex]} />
-    <Slider 
-      data={data}
-      activeIndex={activeIndex}
-      nextBanner={nextBanner}
-      prevBanner={prevBanner}
-      selectBanner={selectBanner}
-      startSlideshow={startSlideshow}
-      stopSlideshow={stopSlideshow}
-      isSlideshowActive={isSlideshowActive}
-    />
-    </main>
+      <main>
+        <HeroBanner {...data[activeIndex]} />
+        <Slider
+          data={data}
+          activeIndex={activeIndex}
+          nextBanner={nextBanner}
+          prevBanner={prevBanner}
+          selectBanner={selectBanner}
+          startSlideshow={startSlideshow}
+          stopSlideshow={stopSlideshow}
+          isSlideshowActive={isSlideshowActive}
+        />
+      </main>
     </div>
   );
 }

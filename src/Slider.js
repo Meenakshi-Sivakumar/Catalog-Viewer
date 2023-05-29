@@ -10,7 +10,7 @@ function Slider({ data, activeIndex, nextBanner, prevBanner, selectBanner, start
           <IoMdArrowDropleft className="react-icon" />
         </button>
         {data.map((banner, index) => (
-          <a key={banner.id} onClick={() => selectBanner(index)}>
+          <button className='banner-btn' key={banner.id} onClick={() => selectBanner(index)}>
             <img
               src={banner.image}
               alt={banner.name}
@@ -19,7 +19,7 @@ function Slider({ data, activeIndex, nextBanner, prevBanner, selectBanner, start
                 transition: 'all 0.3s ease-in-out'
               }}
             />
-          </a>
+          </button>
         ))}
         <button className="nav-btn" onClick={nextBanner}>
           <IoMdArrowDropright className="react-icon" />

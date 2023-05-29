@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     id: 1,
     active: true,
@@ -45,3 +45,5 @@ export default [
       "The clouds, ever-changing and ethereal, paint the sky with their graceful presence, captivating our imaginations and evoking a sense of wonder. These celestial formations, like floating brushstrokes on a vast canvas, bring life and character to the expanse above us. From wispy strands to towering cumulonimbus, each cloud tells a unique story and holds a beauty all its own.Clouds serve as nature's storytellers, shaping the mood and atmosphere of a day. The billowing, cotton-like cumulus clouds bring a sense of lightness and joy, casting playful shadows on the earth below. They invite us to imagine familiar shapes and objects within their ever-shifting forms, igniting our creativity and encouraging us to dream.On overcast days, when a thick layer of stratus clouds blankets the sky, a sense of serenity and calmness descends upon the world. The diffused light creates a softness in the surroundings, as if the world is wrapped in a comforting embrace. These clouds, seemingly infinite in their expanse, invite us to slow down and appreciate the subtler details of life.The towering cumulonimbus clouds, with their anvil-like shapes and dark underbellies, command attention and inspire awe. These majestic giants bring with them the drama of thunderstorms, unleashing the power of nature with thunder, lightning, and torrential rains. They remind us of the forces at play in the atmosphere and the immense scale of our planet."
   },
 ];
+
+export default data;
