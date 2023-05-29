@@ -8,8 +8,10 @@ This is a catalog viewer React application that allows you to browse through a c
 - Play/Pause button to control automatic slideshow of images
 - Clicking on any thumbnail displays the corresponding image with details
 - Highlighting of the currently selected thumbnail with grayscale effect on others
-
-![Catalog Viewer Screenshot](screenshot.png)
+- 
+<div align="center">
+  <img src="catalog-viewer.PNG" alt="Catalog Viewer Screenshot" />
+</div>
 
 ## Live Demo
 
@@ -17,22 +19,46 @@ You can access the live demo of the Catalog Viewer application [here](https://ca
 
 ## Installation
 
-To run the Catalog Viewer application locally, you need to have Node.js installed on your machine. Follow these steps:
+To use the Catalog Viewer component in your own project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/catalog-viewer.git`
-2. Navigate to the project directory: `cd catalog-viewer`
-3. Install the dependencies: `npm install`
-4. Start the development server: `npm start`
-5. Open your browser and visit `http://localhost:3000` to view the application.
+1. Clone this repository or download the source code.
+
+2. Include the necessary files in your project directory.
+
+3. Import the React component into your application:
+```jsx
+ import CatalogViewer from 'catalog-viewer';
+
+  // Use the CatalogViewer component in your application
+```
+
+Note: Make sure you have the appropriate build setup (e.g., webpack, Babel) in your project to handle the import of the React component.
+
+4.Customize the component as needed, providing your own data and styling.
 
 ## Usage
 
-Once the application is running, you can navigate through the images using the Previous and Next buttons. Clicking on the Play button starts the automatic slideshow, and clicking it again pauses the slideshow. Clicking on any thumbnail loads the corresponding image with details. The currently selected thumbnail is highlighted, while the others appear in grayscale.
+Once you have imported the CatalogViewer component into your application, you can use it as follows:
+```jsx
+import React from 'react';
+import CatalogViewer from 'catalog-viewer';
+
+function App() {
+  // Your data and logic here
+
+  return (
+    <div>
+      {/* Other components */}
+      <CatalogViewer /* Pass necessary props */ />
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+Remember to provide the necessary props to the CatalogViewer component based on your data and requirements.
 
 ## Contributing
-
-Contributions to the Catalog Viewer project are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request. 
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+Contributions to the Catalog Viewer project are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
