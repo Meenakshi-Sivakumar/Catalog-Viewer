@@ -8,7 +8,6 @@ This is a catalog viewer React application that allows you to browse through a c
 - Play/Pause button to control automatic slideshow of images
 - Clicking on any thumbnail displays the corresponding image with details
 - Highlighting of the currently selected thumbnail with grayscale effect on others
-- 
 <div align="center">
   <img src="catalog-viewer.PNG" alt="Catalog Viewer Screenshot" />
 </div>
