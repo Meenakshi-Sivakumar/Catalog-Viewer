@@ -327,6 +327,7 @@ main {
 
   .img-container {
     width: 50%;
+    outline: none;
     height: 400px;
     flex: 3;
   }
